@@ -1,0 +1,289 @@
+[gd_scene load_steps=15 format=2]
+
+[ext_resource path="res://PlacehoolderSprites/BG1.png" type="Texture" id=1]
+[ext_resource path="res://ObjectScenes/WardobeButton.tscn" type="PackedScene" id=2]
+[ext_resource path="res://PlacehoolderSprites/Yes_200x128.png" type="Texture" id=3]
+[ext_resource path="res://PlacehoolderSprites/QuizA.png" type="Texture" id=4]
+[ext_resource path="res://Sprites/Buttons/Voice.png" type="Texture" id=5]
+[ext_resource path="res://Sprites/Buttons/VoiceHover.png" type="Texture" id=6]
+[ext_resource path="res://Fonts/DynamicFonts/ClothesEnglish.tres" type="DynamicFont" id=7]
+[ext_resource path="res://Fonts/ProductSans-Italic.ttf" type="DynamicFontData" id=8]
+[ext_resource path="res://ObjectScenes/WardobeBase.gd" type="Script" id=9]
+[ext_resource path="res://ObjectScenes/BackButton.tscn" type="PackedScene" id=10]
+[ext_resource path="res://ObjectScenes/InOverlay.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Fonts/ProductSans-Bold.ttf" type="DynamicFontData" id=12]
+
+[sub_resource type="DynamicFont" id=2]
+size = 54
+font_data = ExtResource( 12 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 38
+font_data = ExtResource( 8 )
+
+[node name="WardobeBase" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 9 )
+
+[node name="BG" type="TextureRect" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+texture = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -562.0
+margin_top = -360.0
+margin_right = 562.0
+margin_bottom = 360.0
+alignment = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer"]
+margin_left = 58.0
+margin_right = 461.0
+margin_bottom = 720.0
+rect_min_size = Vector2( 0, 720 )
+alignment = 1
+
+[node name="ClothesClass" type="Label" parent="HBoxContainer/VBoxContainer"]
+margin_top = 92.0
+margin_right = 403.0
+margin_bottom = 171.0
+custom_fonts/font = ExtResource( 7 )
+text = "Clothes Class"
+align = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="HBoxContainer/VBoxContainer"]
+margin_top = 175.0
+margin_right = 403.0
+margin_bottom = 285.0
+alignment = 1
+
+[node name="WardobeButton" parent="HBoxContainer/VBoxContainer/HBoxContainer" instance=ExtResource( 2 )]
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 32.0
+margin_top = 0.0
+margin_right = 142.0
+margin_bottom = 110.0
+
+[node name="WardobeButton2" parent="HBoxContainer/VBoxContainer/HBoxContainer" instance=ExtResource( 2 )]
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 146.0
+margin_top = 0.0
+margin_right = 256.0
+margin_bottom = 110.0
+
+[node name="WardobeButton3" parent="HBoxContainer/VBoxContainer/HBoxContainer" instance=ExtResource( 2 )]
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 260.0
+margin_top = 0.0
+margin_right = 370.0
+margin_bottom = 110.0
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="HBoxContainer/VBoxContainer"]
+margin_top = 289.0
+margin_right = 403.0
+margin_bottom = 399.0
+alignment = 1
+
+[node name="WardobeButton" parent="HBoxContainer/VBoxContainer/HBoxContainer2" instance=ExtResource( 2 )]
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 32.0
+margin_top = 0.0
+margin_right = 142.0
+margin_bottom = 110.0
+
+[node name="WardobeButton2" parent="HBoxContainer/VBoxContainer/HBoxContainer2" instance=ExtResource( 2 )]
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 146.0
+margin_top = 0.0
+margin_right = 256.0
+margin_bottom = 110.0
+
+[node name="WardobeButton3" parent="HBoxContainer/VBoxContainer/HBoxContainer2" instance=ExtResource( 2 )]
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 260.0
+margin_top = 0.0
+margin_right = 370.0
+margin_bottom = 110.0
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="HBoxContainer/VBoxContainer"]
+margin_top = 403.0
+margin_right = 403.0
+margin_bottom = 513.0
+alignment = 1
+
+[node name="WardobeButton" parent="HBoxContainer/VBoxContainer/HBoxContainer3" instance=ExtResource( 2 )]
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 32.0
+margin_top = 0.0
+margin_right = 142.0
+margin_bottom = 110.0
+
+[node name="WardobeButton2" parent="HBoxContainer/VBoxContainer/HBoxContainer3" instance=ExtResource( 2 )]
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 146.0
+margin_top = 0.0
+margin_right = 256.0
+margin_bottom = 110.0
+
+[node name="WardobeButton3" parent="HBoxContainer/VBoxContainer/HBoxContainer3" instance=ExtResource( 2 )]
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 260.0
+margin_top = 0.0
+margin_right = 370.0
+margin_bottom = 110.0
+
+[node name="HBoxContainer4" type="HBoxContainer" parent="HBoxContainer/VBoxContainer"]
+margin_top = 517.0
+margin_right = 403.0
+margin_bottom = 627.0
+alignment = 1
+
+[node name="WardobeButton" parent="HBoxContainer/VBoxContainer/HBoxContainer4" instance=ExtResource( 2 )]
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 32.0
+margin_top = 0.0
+margin_right = 142.0
+margin_bottom = 110.0
+
+[node name="WardobeButton2" parent="HBoxContainer/VBoxContainer/HBoxContainer4" instance=ExtResource( 2 )]
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 146.0
+margin_top = 0.0
+margin_right = 256.0
+margin_bottom = 110.0
+
+[node name="WardobeButton3" parent="HBoxContainer/VBoxContainer/HBoxContainer4" instance=ExtResource( 2 )]
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 260.0
+margin_top = 0.0
+margin_right = 370.0
+margin_bottom = 110.0
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="HBoxContainer"]
+margin_left = 465.0
+margin_right = 1065.0
+margin_bottom = 720.0
+rect_min_size = Vector2( 600, 0 )
+alignment = 1
+
+[node name="BigSprite" type="TextureRect" parent="HBoxContainer/VBoxContainer2"]
+margin_top = 58.0
+margin_right = 600.0
+margin_bottom = 458.0
+rect_min_size = Vector2( 400, 400 )
+texture = ExtResource( 4 )
+expand = true
+stretch_mode = 4
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HBoxContainer" type="HBoxContainer" parent="HBoxContainer/VBoxContainer2"]
+margin_top = 462.0
+margin_right = 600.0
+margin_bottom = 541.0
+alignment = 1
+
+[node name="Voice" type="TextureButton" parent="HBoxContainer/VBoxContainer2/HBoxContainer"]
+margin_left = 149.0
+margin_right = 233.0
+margin_bottom = 79.0
+rect_min_size = Vector2( 84, 64 )
+texture_normal = ExtResource( 5 )
+texture_pressed = ExtResource( 6 )
+expand = true
+stretch_mode = 3
+
+[node name="English" type="Label" parent="HBoxContainer/VBoxContainer2/HBoxContainer"]
+margin_left = 237.0
+margin_right = 450.0
+margin_bottom = 79.0
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_fonts/font = ExtResource( 7 )
+text = "English"
+align = 1
+
+[node name="Indo" type="Label" parent="HBoxContainer/VBoxContainer2"]
+margin_top = 545.0
+margin_right = 600.0
+margin_bottom = 611.0
+custom_fonts/font = SubResource( 2 )
+text = "Indonesia"
+align = 1
+
+[node name="Example" type="Label" parent="HBoxContainer/VBoxContainer2"]
+margin_top = 615.0
+margin_right = 600.0
+margin_bottom = 662.0
+custom_fonts/font = SubResource( 3 )
+text = "Indonesia"
+align = 1
+
+[node name="Weather" type="TextureRect" parent="HBoxContainer/VBoxContainer2"]
+visible = false
+margin_top = 512.0
+margin_right = 600.0
+margin_bottom = 640.0
+texture = ExtResource( 3 )
+stretch_mode = 4
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BackButton" parent="." instance=ExtResource( 10 )]
+targetScene = "WardrobeMenu"
+
+[node name="Overlay" parent="." instance=ExtResource( 11 )]
+visible = false
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+
+[connection signal="button_down" from="HBoxContainer/VBoxContainer2/HBoxContainer/Voice" to="." method="_on_Voice_button_down"]

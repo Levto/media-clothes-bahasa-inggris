@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Skirt.wav-bd08b0d9e25a3917d7a37b658ddee3d8.sample"
+
+[deps]
+
+source_file="res://Audio/Skirt.wav"
+dest_files=[ "res://.import/Skirt.wav-bd08b0d9e25a3917d7a37b658ddee3d8.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

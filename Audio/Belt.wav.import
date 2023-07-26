@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Belt.wav-2637b849dc4ca597aa40eb5badf59b93.sample"
+
+[deps]
+
+source_file="res://Audio/Belt.wav"
+dest_files=[ "res://.import/Belt.wav-2637b849dc4ca597aa40eb5badf59b93.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

@@ -1,0 +1,92 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://Fonts/DynamicFonts/ClothesEnglish.tres" type="DynamicFont" id=1]
+[ext_resource path="res://Sprites/Buttons/Medium.png" type="Texture" id=2]
+[ext_resource path="res://Sprites/Buttons/Large.png" type="Texture" id=3]
+[ext_resource path="res://PlacehoolderSprites/BG1.png" type="Texture" id=4]
+[ext_resource path="res://Sprites/Buttons/Extra Large.png" type="Texture" id=5]
+[ext_resource path="res://Sprites/Buttons/Small.png" type="Texture" id=6]
+[ext_resource path="res://ObjectScenes/BackButton.tscn" type="PackedScene" id=7]
+[ext_resource path="res://ObjectScenes/InOverlay.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Fonts/DynamicFonts/HelpText.tres" type="DynamicFont" id=9]
+
+[node name="Size" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BG" type="TextureRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -508.0
+margin_top = -319.5
+margin_right = 508.0
+margin_bottom = 319.5
+alignment = 1
+
+[node name="Title" type="Label" parent="VBoxContainer"]
+margin_right = 1016.0
+margin_bottom = 161.0
+custom_fonts/font = ExtResource( 1 )
+text = "Clothes Sizes
+(Ukuran Pakaian)"
+align = 1
+valign = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
+margin_top = 165.0
+margin_right = 1016.0
+margin_bottom = 466.0
+alignment = 1
+
+[node name="Small" type="TextureRect" parent="VBoxContainer/HBoxContainer"]
+margin_right = 251.0
+margin_bottom = 301.0
+texture = ExtResource( 6 )
+
+[node name="Medium" type="TextureRect" parent="VBoxContainer/HBoxContainer"]
+margin_left = 255.0
+margin_right = 506.0
+margin_bottom = 301.0
+texture = ExtResource( 2 )
+
+[node name="Large" type="TextureRect" parent="VBoxContainer/HBoxContainer"]
+margin_left = 510.0
+margin_right = 761.0
+margin_bottom = 301.0
+texture = ExtResource( 3 )
+
+[node name="Extra Large" type="TextureRect" parent="VBoxContainer/HBoxContainer"]
+margin_left = 765.0
+margin_right = 1016.0
+margin_bottom = 301.0
+texture = ExtResource( 5 )
+
+[node name="Label" type="Label" parent="VBoxContainer"]
+margin_top = 470.0
+margin_right = 1016.0
+margin_bottom = 639.0
+custom_fonts/font = ExtResource( 9 )
+text = "Sentence Structure:
+[Size] + [Color] + [Clothes]
+Example:
+Large Blue T-Shirt (Kaos Biru Besar)"
+align = 1
+
+[node name="BackButton" parent="." instance=ExtResource( 7 )]
+targetScene = "SubMenu"
+
+[node name="Overlay" parent="." instance=ExtResource( 8 )]
+visible = false

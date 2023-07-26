@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/T-Shirt.ogg-f6156a19bebe33b1f9c2b21be90ae002.oggstr"
+
+[deps]
+
+source_file="res://Audio/T-Shirt.ogg"
+dest_files=[ "res://.import/T-Shirt.ogg-f6156a19bebe33b1f9c2b21be90ae002.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

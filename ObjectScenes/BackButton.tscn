@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Sprites/Buttons/Back.png" type="Texture" id=1]
+[ext_resource path="res://Sprites/Buttons/BackHover.png" type="Texture" id=2]
+[ext_resource path="res://ObjectScenes/BackButton.gd" type="Script" id=3]
+
+[node name="BackButton" type="TextureButton"]
+margin_left = 63.0
+margin_top = 54.0
+margin_right = 127.0
+margin_bottom = 118.0
+rect_min_size = Vector2( 64, 64 )
+texture_normal = ExtResource( 1 )
+texture_pressed = ExtResource( 1 )
+texture_hover = ExtResource( 2 )
+stretch_mode = 3
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="button_up" from="." to="." method="_on_BackButton_button_up"]

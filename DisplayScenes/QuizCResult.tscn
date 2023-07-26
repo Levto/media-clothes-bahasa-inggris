@@ -1,0 +1,606 @@
+[gd_scene load_steps=16 format=2]
+
+[ext_resource path="res://Fonts/DynamicFonts/ClothesEnglish.tres" type="DynamicFont" id=1]
+[ext_resource path="res://Sprites/WardrobeButtons/Belt.png" type="Texture" id=2]
+[ext_resource path="res://Fonts/DynamicFonts/Dialogues.tres" type="DynamicFont" id=3]
+[ext_resource path="res://Fonts/DynamicFonts/HelpText.tres" type="DynamicFont" id=4]
+[ext_resource path="res://PlacehoolderSprites/BG1.png" type="Texture" id=5]
+[ext_resource path="res://Sprites/Buttons/NextHover.png" type="Texture" id=6]
+[ext_resource path="res://Sprites/Buttons/Next.png" type="Texture" id=7]
+[ext_resource path="res://Sprites/Weather/Cloudy.png" type="Texture" id=8]
+[ext_resource path="res://PlacehoolderSprites/Answer_Correct.png" type="Texture" id=9]
+[ext_resource path="res://ObjectScenes/BackButton.tscn" type="PackedScene" id=10]
+[ext_resource path="res://ObjectScenes/InOverlay.tscn" type="PackedScene" id=11]
+[ext_resource path="res://DisplayScenes/QuizCResult.gd" type="Script" id=12]
+
+[sub_resource type="Animation" id=1]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("Result1/Title:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Result1/Text:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Result1/Task:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Result1/Text2:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Result1/Bought:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("Result2/Title2:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ) ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("Result2/HBoxContainer/ResultCheck:modulate")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ) ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("Result2/HBoxContainer/QuizRank/Label:modulate")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ) ]
+}
+tracks/8/type = "value"
+tracks/8/path = NodePath("Result2/HBoxContainer/QuizRank/QuizRankIcon:modulate")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ) ]
+}
+tracks/9/type = "value"
+tracks/9/path = NodePath("Result2/HBoxContainer/QuizRank/CongratsText:modulate")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=2]
+resource_name = "enter_scene"
+length = 4.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("Result1/Title:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( -0.1, 0, 0.4, 0.8 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Result1/Text:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 1.2, 1.6 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Result1/Task:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 1.9, 2.3 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Result1/Text2:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 2.6, 3.1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Result1/Bought:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 3.5, 3.9 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=3]
+resource_name = "next"
+length = 4.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("Result2/Title2:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Result2/HBoxContainer/ResultCheck:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.9, 1.3 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Result2/HBoxContainer/QuizRank/Label:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 1.7, 2.2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Result2/HBoxContainer/QuizRank/QuizRankIcon:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 2.6, 3.1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Result2/HBoxContainer/QuizRank/CongratsText:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 3.5, 3.9 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+
+[node name="QuizCResult" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 12 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BG" type="TextureRect" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+texture = ExtResource( 5 )
+
+[node name="Result1" type="VBoxContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+alignment = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Title" type="Label" parent="Result1"]
+margin_top = 29.0
+margin_right = 1280.0
+margin_bottom = 108.0
+custom_fonts/font = ExtResource( 1 )
+text = "Quiz Results"
+align = 1
+
+[node name="Text" type="Label" parent="Result1"]
+margin_top = 112.0
+margin_right = 1280.0
+margin_bottom = 172.0
+rect_min_size = Vector2( 0, 60 )
+custom_fonts/font = ExtResource( 4 )
+text = "Clothes that you were tasked to buy:"
+align = 1
+valign = 2
+
+[node name="Task" type="HBoxContainer" parent="Result1"]
+margin_top = 176.0
+margin_right = 1280.0
+margin_bottom = 399.0
+alignment = 1
+
+[node name="Clothes" type="VBoxContainer" parent="Result1/Task"]
+margin_left = 186.0
+margin_right = 486.0
+margin_bottom = 223.0
+alignment = 1
+
+[node name="ClothesIcon" type="TextureRect" parent="Result1/Task/Clothes"]
+margin_right = 300.0
+margin_bottom = 150.0
+rect_min_size = Vector2( 300, 0 )
+texture = ExtResource( 2 )
+stretch_mode = 4
+
+[node name="ClothesName" type="Label" parent="Result1/Task/Clothes"]
+margin_top = 154.0
+margin_right = 300.0
+margin_bottom = 223.0
+custom_fonts/font = ExtResource( 3 )
+text = "Clothes"
+align = 1
+
+[node name="Color" type="VBoxContainer" parent="Result1/Task"]
+margin_left = 490.0
+margin_right = 790.0
+margin_bottom = 223.0
+alignment = 1
+
+[node name="ColorIcon" type="TextureRect" parent="Result1/Task/Color"]
+margin_right = 300.0
+margin_bottom = 150.0
+rect_min_size = Vector2( 300, 0 )
+texture = ExtResource( 2 )
+stretch_mode = 4
+
+[node name="ColorName" type="Label" parent="Result1/Task/Color"]
+margin_top = 154.0
+margin_right = 300.0
+margin_bottom = 223.0
+custom_fonts/font = ExtResource( 3 )
+text = "Clothes"
+align = 1
+
+[node name="Size" type="VBoxContainer" parent="Result1/Task"]
+margin_left = 794.0
+margin_right = 1094.0
+margin_bottom = 223.0
+alignment = 1
+
+[node name="SizeIcon" type="TextureRect" parent="Result1/Task/Size"]
+margin_right = 300.0
+margin_bottom = 150.0
+rect_min_size = Vector2( 300, 0 )
+texture = ExtResource( 2 )
+stretch_mode = 4
+
+[node name="SizeName" type="Label" parent="Result1/Task/Size"]
+margin_top = 154.0
+margin_right = 300.0
+margin_bottom = 223.0
+custom_fonts/font = ExtResource( 3 )
+text = "Clothes"
+align = 1
+
+[node name="Text2" type="Label" parent="Result1"]
+margin_top = 403.0
+margin_right = 1280.0
+margin_bottom = 463.0
+rect_min_size = Vector2( 0, 60 )
+custom_fonts/font = ExtResource( 4 )
+text = "Clothes that you bought:"
+align = 1
+valign = 2
+
+[node name="Bought" type="HBoxContainer" parent="Result1"]
+margin_top = 467.0
+margin_right = 1280.0
+margin_bottom = 690.0
+alignment = 1
+
+[node name="Clothes" type="VBoxContainer" parent="Result1/Bought"]
+margin_left = 186.0
+margin_right = 486.0
+margin_bottom = 223.0
+alignment = 1
+
+[node name="ClothesIcon" type="TextureRect" parent="Result1/Bought/Clothes"]
+margin_right = 300.0
+margin_bottom = 150.0
+rect_min_size = Vector2( 300, 0 )
+texture = ExtResource( 2 )
+stretch_mode = 4
+
+[node name="ClothesName" type="Label" parent="Result1/Bought/Clothes"]
+margin_top = 154.0
+margin_right = 300.0
+margin_bottom = 223.0
+custom_fonts/font = ExtResource( 3 )
+text = "Clothes"
+align = 1
+
+[node name="Color" type="VBoxContainer" parent="Result1/Bought"]
+margin_left = 490.0
+margin_right = 790.0
+margin_bottom = 223.0
+alignment = 1
+
+[node name="ColorIcon" type="TextureRect" parent="Result1/Bought/Color"]
+margin_right = 300.0
+margin_bottom = 150.0
+rect_min_size = Vector2( 300, 0 )
+texture = ExtResource( 2 )
+stretch_mode = 4
+
+[node name="ColorName" type="Label" parent="Result1/Bought/Color"]
+margin_top = 154.0
+margin_right = 300.0
+margin_bottom = 223.0
+custom_fonts/font = ExtResource( 3 )
+text = "Clothes"
+align = 1
+
+[node name="Size" type="VBoxContainer" parent="Result1/Bought"]
+margin_left = 794.0
+margin_right = 1094.0
+margin_bottom = 223.0
+alignment = 1
+
+[node name="SizeIcon" type="TextureRect" parent="Result1/Bought/Size"]
+margin_right = 300.0
+margin_bottom = 150.0
+rect_min_size = Vector2( 300, 0 )
+texture = ExtResource( 2 )
+stretch_mode = 4
+
+[node name="SizeName" type="Label" parent="Result1/Bought/Size"]
+margin_top = 154.0
+margin_right = 300.0
+margin_bottom = 223.0
+custom_fonts/font = ExtResource( 3 )
+text = "Clothes"
+align = 1
+
+[node name="Result2" type="VBoxContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+alignment = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Title2" type="Label" parent="Result2"]
+margin_top = 99.0
+margin_right = 1280.0
+margin_bottom = 199.0
+rect_min_size = Vector2( 0, 100 )
+custom_fonts/font = ExtResource( 1 )
+text = "Quiz Results"
+align = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Result2"]
+margin_top = 203.0
+margin_right = 1280.0
+margin_bottom = 620.0
+alignment = 1
+
+[node name="ResultCheck" type="VBoxContainer" parent="Result2/HBoxContainer"]
+margin_left = 188.0
+margin_right = 487.0
+margin_bottom = 417.0
+alignment = 1
+
+[node name="ClothesResult" type="HBoxContainer" parent="Result2/HBoxContainer/ResultCheck"]
+margin_top = 69.0
+margin_right = 299.0
+margin_bottom = 159.0
+
+[node name="ClothesLabel" type="Label" parent="Result2/HBoxContainer/ResultCheck/ClothesResult"]
+margin_right = 226.0
+margin_bottom = 90.0
+rect_min_size = Vector2( 0, 90 )
+custom_fonts/font = ExtResource( 3 )
+text = "Clothes: "
+
+[node name="ClothesResultIcon" type="TextureRect" parent="Result2/HBoxContainer/ResultCheck/ClothesResult"]
+margin_left = 230.0
+margin_right = 299.0
+margin_bottom = 90.0
+rect_min_size = Vector2( 69, 69 )
+texture = ExtResource( 9 )
+expand = true
+stretch_mode = 5
+
+[node name="ColorResult" type="HBoxContainer" parent="Result2/HBoxContainer/ResultCheck"]
+margin_top = 163.0
+margin_right = 299.0
+margin_bottom = 253.0
+
+[node name="ColorLabel" type="Label" parent="Result2/HBoxContainer/ResultCheck/ColorResult"]
+margin_right = 169.0
+margin_bottom = 90.0
+rect_min_size = Vector2( 0, 90 )
+custom_fonts/font = ExtResource( 3 )
+text = "Color: "
+
+[node name="ColorResultIcon" type="TextureRect" parent="Result2/HBoxContainer/ResultCheck/ColorResult"]
+margin_left = 173.0
+margin_right = 242.0
+margin_bottom = 90.0
+rect_min_size = Vector2( 69, 69 )
+texture = ExtResource( 9 )
+expand = true
+stretch_mode = 5
+
+[node name="SizeResult" type="HBoxContainer" parent="Result2/HBoxContainer/ResultCheck"]
+margin_top = 257.0
+margin_right = 299.0
+margin_bottom = 347.0
+
+[node name="SizeLabel" type="Label" parent="Result2/HBoxContainer/ResultCheck/SizeResult"]
+margin_right = 132.0
+margin_bottom = 90.0
+rect_min_size = Vector2( 0, 90 )
+custom_fonts/font = ExtResource( 3 )
+text = "Size: "
+
+[node name="SizeResultIcon" type="TextureRect" parent="Result2/HBoxContainer/ResultCheck/SizeResult"]
+margin_left = 136.0
+margin_right = 205.0
+margin_bottom = 90.0
+rect_min_size = Vector2( 69, 69 )
+texture = ExtResource( 9 )
+expand = true
+stretch_mode = 5
+
+[node name="QuizRank" type="VBoxContainer" parent="Result2/HBoxContainer"]
+margin_left = 491.0
+margin_right = 1091.0
+margin_bottom = 417.0
+
+[node name="Label" type="Label" parent="Result2/HBoxContainer/QuizRank"]
+margin_right = 600.0
+margin_bottom = 69.0
+rect_min_size = Vector2( 600, 0 )
+custom_fonts/font = ExtResource( 3 )
+text = "Quiz Total Score:"
+align = 1
+
+[node name="QuizRankIcon" type="TextureRect" parent="Result2/HBoxContainer/QuizRank"]
+margin_top = 73.0
+margin_right = 600.0
+margin_bottom = 373.0
+rect_min_size = Vector2( 600, 300 )
+texture = ExtResource( 8 )
+expand = true
+stretch_mode = 6
+
+[node name="CongratsText" type="Label" parent="Result2/HBoxContainer/QuizRank"]
+margin_top = 377.0
+margin_right = 600.0
+margin_bottom = 417.0
+custom_fonts/font = ExtResource( 4 )
+text = "Good Work!"
+align = 1
+
+[node name="Next" type="TextureButton" parent="."]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -167.0
+margin_top = -99.0
+margin_right = -62.0
+margin_bottom = -45.0
+rect_min_size = Vector2( 105, 54 )
+texture_normal = ExtResource( 7 )
+texture_pressed = ExtResource( 7 )
+texture_hover = ExtResource( 6 )
+expand = true
+stretch_mode = 4
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BackButton" parent="." instance=ExtResource( 10 )]
+
+[node name="Overlay" parent="." instance=ExtResource( 11 )]
+visible = false
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/RESET = SubResource( 1 )
+anims/enter_scene = SubResource( 2 )
+anims/next = SubResource( 3 )
+
+[connection signal="button_down" from="Next" to="." method="_on_Next_button_down"]
+[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_AnimationPlayer_animation_finished"]

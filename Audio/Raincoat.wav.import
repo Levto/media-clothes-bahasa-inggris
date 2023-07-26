@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Raincoat.wav-7f3845b8b2a6f1c234447c08cfc7ec76.sample"
+
+[deps]
+
+source_file="res://Audio/Raincoat.wav"
+dest_files=[ "res://.import/Raincoat.wav-7f3845b8b2a6f1c234447c08cfc7ec76.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

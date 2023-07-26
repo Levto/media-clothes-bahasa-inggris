@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Glasses.wav-75bd76ecb50de14404ff1fcd29c0ffb0.sample"
+
+[deps]
+
+source_file="res://Audio/Glasses.wav"
+dest_files=[ "res://.import/Glasses.wav-75bd76ecb50de14404ff1fcd29c0ffb0.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

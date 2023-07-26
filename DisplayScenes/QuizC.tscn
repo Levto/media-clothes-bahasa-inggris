@@ -1,0 +1,234 @@
+[gd_scene load_steps=27 format=2]
+
+[ext_resource path="res://Fonts/DynamicFonts/ClothesEnglish.tres" type="DynamicFont" id=1]
+[ext_resource path="res://PlacehoolderSprites/BG4.png" type="Texture" id=2]
+[ext_resource path="res://Sprites/Sales/Welcome/1.png" type="Texture" id=3]
+[ext_resource path="res://Sprites/Sales/Welcome/0.png" type="Texture" id=4]
+[ext_resource path="res://Sprites/Buttons/NextHover.png" type="Texture" id=5]
+[ext_resource path="res://Sprites/Sales/Welcome/2.png" type="Texture" id=6]
+[ext_resource path="res://Sprites/Buttons/Next.png" type="Texture" id=7]
+[ext_resource path="res://ObjectScenes/BackButton.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Fonts/ProductSans-Bold.ttf" type="DynamicFontData" id=9]
+[ext_resource path="res://Fonts/DynamicFonts/Dialogues.tres" type="DynamicFont" id=10]
+[ext_resource path="res://Sprites/Buttons/NoteButtonHover.png" type="Texture" id=11]
+[ext_resource path="res://Sprites/Buttons/NoteButton.png" type="Texture" id=12]
+[ext_resource path="res://ObjectScenes/InOverlay.tscn" type="PackedScene" id=13]
+[ext_resource path="res://DisplayScenes/QuizC.gd" type="Script" id=14]
+[ext_resource path="res://QuizCButtonGroup.tres" type="ButtonGroup" id=15]
+[ext_resource path="res://Sprites/Sales/Thanks/0.png" type="Texture" id=16]
+[ext_resource path="res://Sprites/Sales/Normal/0.png" type="Texture" id=17]
+[ext_resource path="res://Sprites/Sales/Normal/2.png" type="Texture" id=18]
+[ext_resource path="res://Sprites/Sales/Thanks/2.png" type="Texture" id=19]
+[ext_resource path="res://Sprites/Sales/Normal/1.png" type="Texture" id=20]
+[ext_resource path="res://Sprites/Sales/Thanks/1.png" type="Texture" id=21]
+
+[sub_resource type="DynamicFont" id=1]
+size = 56
+outline_size = 2
+outline_color = Color( 0.4, 0.701961, 0.976471, 1 )
+font_data = ExtResource( 9 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 64
+outline_size = 5
+outline_color = Color( 0.4, 0.701961, 0.976471, 1 )
+font_data = ExtResource( 9 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 64
+outline_size = 3
+outline_color = Color( 0.862745, 0.576471, 0.239216, 1 )
+font_data = ExtResource( 9 )
+
+[sub_resource type="DynamicFont" id=4]
+size = 64
+outline_size = 3
+outline_color = Color( 0.862745, 0.576471, 0.239216, 1 )
+font_data = ExtResource( 9 )
+
+[sub_resource type="SpriteFrames" id=5]
+animations = [ {
+"frames": [ ExtResource( 17 ), ExtResource( 20 ), ExtResource( 18 ), ExtResource( 18 ), ExtResource( 20 ), ExtResource( 17 ), ExtResource( 20 ), ExtResource( 18 ), ExtResource( 18 ), ExtResource( 20 ), ExtResource( 17 ) ],
+"loop": false,
+"name": "normal",
+"speed": 12.0
+}, {
+"frames": [ ExtResource( 17 ) ],
+"loop": false,
+"name": "idle",
+"speed": 12.0
+}, {
+"frames": [ ExtResource( 16 ), ExtResource( 21 ), ExtResource( 19 ), ExtResource( 19 ), ExtResource( 21 ), ExtResource( 16 ), ExtResource( 21 ), ExtResource( 19 ), ExtResource( 19 ), ExtResource( 21 ), ExtResource( 16 ) ],
+"loop": false,
+"name": "thanks",
+"speed": 12.0
+}, {
+"frames": [ ExtResource( 4 ), ExtResource( 3 ), ExtResource( 6 ), ExtResource( 6 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 3 ), ExtResource( 6 ), ExtResource( 6 ), ExtResource( 3 ), ExtResource( 4 ) ],
+"loop": false,
+"name": "welcome",
+"speed": 12.0
+} ]
+
+[node name="QuizC" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 14 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+answerButtons = ExtResource( 15 )
+
+[node name="BG" type="TextureRect" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+texture = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -566.5
+margin_top = -288.0
+margin_right = 566.5
+margin_bottom = 288.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
+margin_right = 1133.0
+margin_bottom = 404.0
+
+[node name="CenterContainer" type="CenterContainer" parent="VBoxContainer/HBoxContainer"]
+margin_right = 300.0
+margin_bottom = 404.0
+rect_min_size = Vector2( 300, 400 )
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/HBoxContainer"]
+margin_left = 304.0
+margin_right = 1037.0
+margin_bottom = 404.0
+
+[node name="SalesText" type="Label" parent="VBoxContainer/HBoxContainer/VBoxContainer"]
+margin_right = 733.0
+margin_bottom = 200.0
+rect_min_size = Vector2( 733, 200 )
+custom_fonts/font = ExtResource( 10 )
+text = "Welcome to the store, may I help you?"
+valign = 1
+autowrap = true
+
+[node name="Dialogue" type="Label" parent="VBoxContainer/HBoxContainer/VBoxContainer"]
+margin_top = 204.0
+margin_right = 733.0
+margin_bottom = 404.0
+rect_min_size = Vector2( 0, 200 )
+custom_fonts/font = SubResource( 1 )
+text = "I'm looking for a Trousers"
+align = 2
+valign = 1
+autowrap = true
+
+[node name="QnA" type="VBoxContainer" parent="VBoxContainer"]
+margin_top = 408.0
+margin_right = 1133.0
+margin_bottom = 576.0
+
+[node name="Question" type="Label" parent="VBoxContainer/QnA"]
+margin_right = 1133.0
+margin_bottom = 79.0
+custom_fonts/font = SubResource( 2 )
+text = "I'm looking for..."
+align = 1
+valign = 1
+
+[node name="Answers" type="HBoxContainer" parent="VBoxContainer/QnA"]
+margin_top = 83.0
+margin_right = 1133.0
+margin_bottom = 168.0
+alignment = 1
+
+[node name="OptionA" type="Button" parent="VBoxContainer/QnA/Answers"]
+margin_left = 58.0
+margin_right = 358.0
+margin_bottom = 85.0
+rect_min_size = Vector2( 300, 0 )
+custom_fonts/font = SubResource( 3 )
+group = ExtResource( 15 )
+text = "Trousers"
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/QnA/Answers"]
+margin_left = 362.0
+margin_right = 412.0
+margin_bottom = 85.0
+rect_min_size = Vector2( 50, 0 )
+
+[node name="OptionB" type="Button" parent="VBoxContainer/QnA/Answers"]
+margin_left = 416.0
+margin_right = 716.0
+margin_bottom = 85.0
+rect_min_size = Vector2( 300, 0 )
+custom_fonts/font = SubResource( 4 )
+group = ExtResource( 15 )
+text = "Raincoat"
+
+[node name="MarginContainer2" type="MarginContainer" parent="VBoxContainer/QnA/Answers"]
+margin_left = 720.0
+margin_right = 770.0
+margin_bottom = 85.0
+rect_min_size = Vector2( 50, 0 )
+
+[node name="OptionC" type="Button" parent="VBoxContainer/QnA/Answers"]
+margin_left = 774.0
+margin_right = 1074.0
+margin_bottom = 85.0
+rect_min_size = Vector2( 300, 0 )
+custom_fonts/font = ExtResource( 1 )
+group = ExtResource( 15 )
+text = "Sweater"
+
+[node name="Next" type="TextureButton" parent="VBoxContainer"]
+visible = false
+margin_top = 408.0
+margin_right = 1137.0
+margin_bottom = 516.0
+rect_min_size = Vector2( 0, 108 )
+texture_normal = ExtResource( 7 )
+texture_pressed = ExtResource( 7 )
+texture_hover = ExtResource( 5 )
+expand = true
+stretch_mode = 3
+
+[node name="Sales" type="AnimatedSprite" parent="."]
+position = Vector2( 241, 271 )
+frames = SubResource( 5 )
+animation = "thanks"
+frame = 10
+playing = true
+
+[node name="BackButton" parent="." instance=ExtResource( 8 )]
+targetScene = "QuizMenu"
+
+[node name="TextureButton" type="TextureButton" parent="."]
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = -118.0
+margin_top = 55.0
+margin_right = -44.0
+margin_bottom = 128.0
+texture_normal = ExtResource( 12 )
+texture_pressed = ExtResource( 12 )
+texture_hover = ExtResource( 11 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Overlay" parent="." instance=ExtResource( 13 )]
+visible = false
+
+[connection signal="button_down" from="VBoxContainer/Next" to="." method="_on_Next_button_down"]
+[connection signal="button_down" from="TextureButton" to="." method="_on_TextureButton_button_down"]
